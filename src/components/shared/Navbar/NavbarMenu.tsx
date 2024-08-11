@@ -1,20 +1,14 @@
-import {
-  BackpackIcon,
-  HamburgerMenuIcon,
-  HeartIcon,
-  PersonIcon,
-} from "@radix-ui/react-icons";
+import { BackpackIcon, HeartIcon, PersonIcon } from "@radix-ui/react-icons";
 import { ButtonToggle } from "../button/ButtonToggle";
 import { ButtonIcon } from "../button/ButtonIcon";
 import { Logo } from "../Logo";
+import { ButtonMenuOpen } from "../button/ButtonToggleMenu";
 
 export function NavbarMenu() {
   return (
-    <nav className="flex-row-between mb-4">
-      <ButtonIcon>
-        <HamburgerMenuIcon className="size-5" />
-      </ButtonIcon>
-      <Logo />
+    <nav className="flex-row-between mb-6">
+      <ButtonMenuOpen />
+      <Logo className="sm:block hidden" />
       <div className="flex-row-center gap-2">
         <ButtonIcon>
           <HeartIcon className="size-5" />
@@ -25,7 +19,9 @@ export function NavbarMenu() {
         <ButtonIcon>
           <PersonIcon className="size-5" />
         </ButtonIcon>
-        <ButtonToggle />
+        <div className="ml-2">
+          <ButtonToggle />
+        </div>
       </div>
     </nav>
   );

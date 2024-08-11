@@ -1,14 +1,14 @@
-export interface RootCategory {
+export interface RootBrand {
   status: string;
   results: number;
-  data: Data;
+  data: DataBrand;
 }
 
-export interface Data {
-  category: Category[];
+export interface DataBrand {
+  brand: Brand[];
 }
 
-export interface Category {
+export interface Brand {
   _id: string;
   name: string;
   description: string;

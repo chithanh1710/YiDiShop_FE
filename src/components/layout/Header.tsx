@@ -1,11 +1,15 @@
-import { NavbarCategory } from "../shared/Navbar/NavbarCategory";
+import { Suspense } from "react";
+import { NavbarBrand } from "../shared/Navbar/NavbarBrand";
 import { NavbarMenu } from "../shared/Navbar/NavbarMenu";
+import { SkeletonNavBrand } from "../shared/skeleton/SkeletonNavBrand";
 
 export default function Header() {
   return (
-    <header className="sticky top-3 max-md:top-1 left-0 mb-6">
+    <header className="mb-8 bg-background text-foreground">
       <NavbarMenu />
-      <NavbarCategory />
+      <Suspense fallback={<SkeletonNavBrand />}>
+        <NavbarBrand />
+      </Suspense>
     </header>
   );
 }

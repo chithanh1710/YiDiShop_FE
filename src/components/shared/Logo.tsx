@@ -1,3 +1,3 @@
-export function Logo() {
-  return <div>Logo</div>;
+export function Logo({ className }: { className?: string }) {
+  return <div className={className}>Logo</div>;
 }

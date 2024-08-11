@@ -1,8 +1,10 @@
-import { RootCategory } from "@/interfaces/RootCategory";
+import { RootBrand } from "@/interfaces/RootBrand";
 
-export async function getCategoryApi(): Promise<RootCategory> {
+export async function getBrandApi(): Promise<RootBrand> {
   try {
-    const res = await fetch("https://yidishop-be.onrender.com/api/v1/category");
+    const res = await fetch(
+      "https://yidishop-be.onrender.com/api/v1/brands?sort[name]=asc"
+    );
     const data = await res.json();
     return data;
   } catch (error) {
