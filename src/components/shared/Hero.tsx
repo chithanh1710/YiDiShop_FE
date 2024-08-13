@@ -39,7 +39,7 @@ export default function Hero() {
   }, [handleClick, isMin]);
 
   return (
-    <section className="relative rounded-xl overflow-hidden mb-8 aspect-[16/7]">
+    <>
       <div className="bg-gradient-to-tl from-black/80 to-black/0 w-full h-full z-10 absolute"></div>
       {listImg.map((img, index) => {
         const translateX = (index - indexImg) * 100;
@@ -71,6 +71,6 @@ export default function Hero() {
       >
         <ChevronRightIcon className="size-6" />
       </Button>
-    </section>
+    </>
   );
 }

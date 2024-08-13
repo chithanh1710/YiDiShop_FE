@@ -1,6 +1,6 @@
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
-import { Menu } from "@/components/shared/Menu";
+import { Menu } from "@/components/shared/menu/Menu";
 
 export default function RootLayout({
   children,
@@ -8,9 +8,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <main className="relative">
+    <main className="relative overflow-x-hidden">
       <Menu />
-      <section className=" container md:px-6 px-3 md:py-6 py-3">
+      <section className="container md:px-6 px-3 md:py-6 py-3">
         <Header />
         <main className="min-h-screen">{children}</main>
         <Footer />
